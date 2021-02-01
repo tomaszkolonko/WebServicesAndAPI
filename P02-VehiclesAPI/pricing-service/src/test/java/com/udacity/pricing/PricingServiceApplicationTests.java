@@ -32,7 +32,6 @@ public class PricingServiceApplicationTests {
 	@Test
 	public void testDBElementCount() {
 		Iterable<Price> prices = priceRepository.findAll();
-		Price price = new Price("USD", new BigDecimal(82735.36), 1L);
 
 		assertThat(prices).isNotEmpty().hasSize(10);
 		assertThat(prices).extracting("vehicleId").contains(1L, 2L, 3L, 4L, 5L, 6L, 7L, 8L, 9L);
